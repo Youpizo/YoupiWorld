@@ -7,9 +7,6 @@ export const HeaderBanner1 = () => {
     return (
       <div className="banner">
         <img src={bannerImage1} alt="Banner1" className="banner-image banner1" />
-        <div className="banner-text">
-          Chez vous, <span className="text-mobile-split">partout et ailleurs</span> 
-        </div>
       </div>
     );
   }

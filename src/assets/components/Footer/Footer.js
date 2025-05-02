@@ -1,15 +1,15 @@
 import React from "react";
 import "../Footer/Footer.css";
-import logo from "../../img/KasaLogo2.png";
+import logo from "../../img/YoupiLogo1.png";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="logo">
-        <img src={logo} alt="Kasa Logo" />
+        <img src={logo} alt="Youpi's World" />
       </div>
       <div className="content">
-        <p>&copy; 2020 Kasa. All<span className="mobile-text"> rights reserved</span></p>
+        <p>&copy; 2025 Youpi. All<span className="mobile-text"> rights reserved</span></p>
       </div>
     </footer>
   );

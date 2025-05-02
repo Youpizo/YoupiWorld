@@ -1,23 +1,26 @@
 
 .footer {
-    height: 209px;
     background-color: #000000;
     color: #FFF;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: arrow;
+    padding: 20px 0 20px 0px;
 }
 
 .content {
-    width: 513px;
-    height: 46px;
     font-family: "Montserrat", sans-serif;
     font-size: 24px;
     font-weight: 500;
     line-height: 34px;
     letter-spacing: 0em;
     text-align: center;
+}
+
+.logo img{
+    width: 250px;
+    height: 100px;
 }
 
 @media screen and (max-width: 600px) {

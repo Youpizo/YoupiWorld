@@ -2,7 +2,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../Header/Header.css";
-import logo from "../../img/KasaLogo.png";
+import logo from "../../img/YoupiLogo2.png";
 
 const Header = () => {
   const location = useLocation(); 
