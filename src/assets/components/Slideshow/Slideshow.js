@@ -4,6 +4,14 @@ import "../Slideshow/Slideshow.css"
 const Slideshow = ({ pictures }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
+    const goToPreviousSlide = () => {
+        setCurrentSlide(prevSlide => (prevSlide === 0 ? pictures.length - 1 : prevSlide - 1));
+    };
+
+    const goToNextSlide = () => {
+        setCurrentSlide(prevSlide => (prevSlide === pictures.length - 1 ? 0 : prevSlide + 1));
+    };
+
     // Eventlistener pour les flèches
     useEffect(() => {
         const handleKeyDown = (event) => {
@@ -21,15 +29,6 @@ const Slideshow = ({ pictures }) => {
       
       }, []); 
 
-    const goToPreviousSlide = () => {
-        setCurrentSlide(prevSlide => (prevSlide === 0 ? pictures.length - 1 : prevSlide - 1));
-    };
-
-    const goToNextSlide = () => {
-        setCurrentSlide(prevSlide => (prevSlide === pictures.length - 1 ? 0 : prevSlide + 1));
-    };
-
-     
     const shouldRenderButtons = pictures.length > 1;
 
     return (
