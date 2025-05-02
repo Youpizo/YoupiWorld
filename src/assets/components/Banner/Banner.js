@@ -9,3 +9,5 @@ export const HeaderBanner1 = () => {
       </div>
     );
   }
+
+export default HeaderBanner1;

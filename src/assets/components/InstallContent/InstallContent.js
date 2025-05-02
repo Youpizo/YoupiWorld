@@ -1,7 +1,7 @@
 import React from 'react';
-import './HomeContent.css';
+import './InstallContent.css';
 
-const HomeContent = () => {
+const InstallContent = () => {
   return (
     <section className="home-content">
       <h1>Démarrer la partie</h1>
@@ -30,4 +30,4 @@ const HomeContent = () => {
   );
 };
 
-export default HomeContent;
+export default InstallContent;

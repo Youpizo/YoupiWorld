@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
 .header {
     background-color: #FFFFFF;
@@ -6,12 +7,14 @@
     justify-content: space-between;
     align-items: center;
   }
-  
-  .logo img {
-    height: 68px;
-    width: 210.32px;
-  }
-  
+
+  .nav {
+    font-family: 'Source Code Pro', monospace;
+    position: fixed;
+    right: 0;
+    z-index: 1030;
+}
+
   @media screen and (max-width: 800px) {
     .logo img {
       height: 46.88px;
@@ -37,7 +40,6 @@
   .nav ul li a {
     width: 136px;
     height: 34px;
-    font-family: "Montserrat", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;

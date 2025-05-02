@@ -5,7 +5,6 @@ import About from "../components/About/About"
 const AboutPage = () => {
     return (
         <>
-        <HeaderBanner1 />
         <About />
         </>
     );
