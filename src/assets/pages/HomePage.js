@@ -1,11 +1,12 @@
 import { HeaderBanner1 } from "../components/Banner/Banner";
-import { useEffect, useState } from "react";
+import HomeContent from "../components/HomeContent/HomeContent";
 
 
 const HomePage = () => {
   return (
     <>
       <HeaderBanner1 />
+      <HomeContent />
     </>
   );
 };
