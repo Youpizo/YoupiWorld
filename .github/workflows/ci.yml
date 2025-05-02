@@ -1,25 +1,37 @@
-name: Node.js CI
+name: Playwright Test Pipeline
 
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - main  # ou ta branche de développement
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
+      # 1. Checkout du code source
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+      # 2. Installer Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
-    - name: Install dependencies
-      run: npm install
+      # 3. Installer les dépendances
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run tests
-      run: npm test
+      # 4. Exécuter les tests Playwright
+      - name: Run Playwright tests
+        run: npm test
+
+      # 5. Télécharger les artefacts si nécessaire (par exemple, pour les captures d'écran en cas d'échec)
+      - name: Upload Playwright screenshots on failure
+        if: failure()
+        uses: actions/upload-artifact@v3
+        with:
+          name: playwright-screenshots
+          path: playwright-report/screenshots/
+
