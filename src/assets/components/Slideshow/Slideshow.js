@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "../Slideshow/Slideshow.css"
 
 const Slideshow = ({ pictures }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const goToPreviousSlide = () => {
+    const goToPreviousSlide = useCallback(() => {
         setCurrentSlide(prevSlide => (prevSlide === 0 ? pictures.length - 1 : prevSlide - 1));
-    };
+    }, [pictures.length]);
 
-    const goToNextSlide = () => {
+    const goToNextSlide = useCallback(() => {
         setCurrentSlide(prevSlide => (prevSlide === pictures.length - 1 ? 0 : prevSlide + 1));
-    };
+    }, [pictures.length]);
+
 
     // Eventlistener pour les flèches
     useEffect(() => {
