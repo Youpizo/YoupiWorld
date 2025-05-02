@@ -13,7 +13,7 @@ import Logements from "./assets/pages/Logements";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename="/YoupiWorld">
       <Layout>
         <Header />
         <main>
