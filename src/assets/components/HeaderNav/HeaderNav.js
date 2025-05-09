@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './SideNav.css';
+import './HeaderNav.css';
 import { Link } from "react-router-dom";
 import logo from "../../img/YoupiLogo1.png";
 
-const SideNav = () => {
+const HeaderNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleNav = () => {
@@ -14,11 +14,11 @@ const SideNav = () => {
     <>
       <header className="navbar">
         <div className="logo">
-        <Link to="/">
-        <img src={logo} alt="Youpi Logo" />
-        </Link>
+          <Link to="/">
+            <img src={logo} alt="Youpi Logo" />
+          </Link>
         </div>
-        <button className="hamburger" onClick={toggleNav}>
+        <button className={`hamburger ${isOpen ? 'open' : ''}`} onClick={toggleNav}>
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>
@@ -29,16 +29,17 @@ const SideNav = () => {
         <button className="close-btn" onClick={toggleNav}>×</button>
         <ul>
           <li><a href="/">Accueil</a></li>
-          <li><a href="/fabrication">Fabrication</a></li>
-          <li><a href="/distributeurs">Distributeurs</a></li>
-          <li><a href="/faq">FAQ</a></li>
+          <li><a href="/fabrication">Expériences</a></li>
+          <li><a href="/distributeurs">Formations</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
 
-      {isOpen && <div className="overlay" onClick={toggleNav}></div>}
+      {isOpen && <div className="overlay show" onClick={toggleNav}></div>}
     </>
   );
 };
 
-export default SideNav;
+export default HeaderNav;
+
+

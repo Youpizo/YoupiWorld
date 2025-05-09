@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&display=swap');
+
+/* Barre de navigation supérieure */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 8rem;
+  background-color: rgba(255, 255, 255, 0); /* totalement transparent */
+  text-align: center;  /* Centrer tout le texte dans la barre de navigation */
+  position: relative; /* Pour s'assurer que le bouton hamburger est correctement placé */
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Bouton hamburger */
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrer les barres horizontalement */
+  align-items: center; /* Centrer les barres verticalement */
+  width: 30px; /* Largeur fixe pour la taille du bouton */
+  height: 30px; /* Hauteur fixe pour la taille du bouton */
+  position: absolute;
+  right: 1rem; /* Place le bouton à droite de la barre de navigation */
+}
+
+.hamburger .bar {
+  width: 25px; /* Largeur des barres */
+  height: 3px; /* Hauteur des barres */
+  background-color: #ffffff;
+  transition: all 0.3s ease; /* Transition fluide lors de la transformation */
+}
+
+/* Lorsque le menu est ouvert, transformer les barres */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px); /* Première barre devient la partie du X */
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0; /* La deuxième barre disparaît */
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px); /* Troisième barre devient l'autre partie du X */
+}
+
+/* Menu latéral */
+.side-nav {
+  position: fixed;
+  top: 0;
+  right: 0; /* Position initiale de l'élément */
+  transform: translateX(100%); /* Déplacer le menu hors de l'écran à droite */
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  backdrop-filter: blur(10px); /* Applique un flou de 10px sur l'arrière-plan */
+  padding: 2rem 1rem;
+  transition: transform 0.5s ease-out, opacity 0.5s ease; /* Animation plus fluide */
+  z-index: 1001;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Début invisible */
+}
+
+.side-nav.open {
+  transform: translateX(0); /* Ramener le menu à sa place */
+  opacity: 1; /* Rendre visible */
+}
+
+.side-nav .close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #ffffff;
+}
+
+.side-nav ul {
+  list-style: none;
+  margin-top: 4rem;
+  text-align: center;  /* Centrer les liens du menu */
+}
+
+.side-nav ul li {
+  margin: 1rem 0;
+}
+
+.side-nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 4rem;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: bold; /* Gras */
+  transition: color 0.3s ease; /* Effet de transition au survol */
+}
+
+.side-nav ul li a:hover {
+  color: #ff9800; /* Changer la couleur lors du survol */
+}
+
+/* Superposition */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Augmenter l'opacité de l'overlay */
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Rendre l'overlay fluide */
+}
+
+.overlay.show {
+  opacity: 1; /* Rendre l'overlay visible */
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .side-nav {
+    width: 100vw;
+    padding: 3rem 2rem;
+  }
+
+  .side-nav ul {
+    margin-top: 3rem;
+  }
+
+  .side-nav ul li a {
+    font-size: 1rem;
+  }
+
+  .side-nav .close-btn {
+    font-size: 2rem;
+    top: 1rem;
+    right: 1rem;
+  }
+}
+
+
