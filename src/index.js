@@ -4,10 +4,8 @@ import "./index.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ErrorPage from "../src/assets/pages/Erreur";
 import HomePage from "./assets/pages/Home";
-import Footer from "./assets/components/Footer/Footer";
 import Layout from "./assets/components/Layout/Layout";
 import AboutPage from "./assets/pages/About";
-import SideNav from "./assets/components/SideNav/SideNav";
 import InstallationPage from "./assets/pages/Installation";
 
 
