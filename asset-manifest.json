@@ -1,16 +1,15 @@
 {
   "files": {
-    "main.css": "/YoupiWorld/static/css/main.3131b265.css",
-    "main.js": "/YoupiWorld/static/js/main.0a1162d6.js",
-    "static/media/headerBanner1.png": "/YoupiWorld/static/media/headerBanner1.d4d15f6160bf4a5ef8bb.png",
-    "static/media/YoupiLogo2.png": "/YoupiWorld/static/media/YoupiLogo2.3d22e4ca214991d38d3c.png",
-    "static/media/YoupiLogo1.png": "/YoupiWorld/static/media/YoupiLogo1.8ee881fa09de2b96277a.png",
+    "main.css": "/YoupiWorld/static/css/main.532866c8.css",
+    "main.js": "/YoupiWorld/static/js/main.9c6a819a.js",
+    "static/media/background.jpg": "/YoupiWorld/static/media/background.79274cca7d4112fcb373.jpg",
+    "static/media/YoupiLogo1.png": "/YoupiWorld/static/media/YoupiLogo1.7d895fd3478a407c00c6.png",
     "index.html": "/YoupiWorld/index.html",
-    "main.3131b265.css.map": "/YoupiWorld/static/css/main.3131b265.css.map",
-    "main.0a1162d6.js.map": "/YoupiWorld/static/js/main.0a1162d6.js.map"
+    "main.532866c8.css.map": "/YoupiWorld/static/css/main.532866c8.css.map",
+    "main.9c6a819a.js.map": "/YoupiWorld/static/js/main.9c6a819a.js.map"
   },
   "entrypoints": [
-    "static/css/main.3131b265.css",
-    "static/js/main.0a1162d6.js"
+    "static/css/main.532866c8.css",
+    "static/js/main.9c6a819a.js"
   ]
 }
