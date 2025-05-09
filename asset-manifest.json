@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/YoupiWorld/static/css/main.532866c8.css",
-    "main.js": "/YoupiWorld/static/js/main.9c6a819a.js",
+    "main.css": "/YoupiWorld/static/css/main.038433ca.css",
+    "main.js": "/YoupiWorld/static/js/main.6e479f8a.js",
     "static/media/background.jpg": "/YoupiWorld/static/media/background.79274cca7d4112fcb373.jpg",
     "static/media/YoupiLogo1.png": "/YoupiWorld/static/media/YoupiLogo1.7d895fd3478a407c00c6.png",
     "index.html": "/YoupiWorld/index.html",
-    "main.532866c8.css.map": "/YoupiWorld/static/css/main.532866c8.css.map",
-    "main.9c6a819a.js.map": "/YoupiWorld/static/js/main.9c6a819a.js.map"
+    "main.038433ca.css.map": "/YoupiWorld/static/css/main.038433ca.css.map",
+    "main.6e479f8a.js.map": "/YoupiWorld/static/js/main.6e479f8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.532866c8.css",
-    "static/js/main.9c6a819a.js"
+    "static/css/main.038433ca.css",
+    "static/js/main.6e479f8a.js"
   ]
 }
