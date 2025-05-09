@@ -1,4 +1,4 @@
-import InstallContent from "../components/InstallContent/InstallContent";
+import InstallContent from "../components/HomeContent/HomeContent";
 
 
 const HomePage = () => {

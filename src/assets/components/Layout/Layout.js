@@ -1,15 +1,17 @@
-//Page conteneur, entourer des éléments de "layout" pour styliser
+import React from 'react';
+import './Layout.css';
+import SideNav from "../SideNav/SideNav.js"; // Si tu as un composant Header
+import Footer from '../Footer/Footer.js'; // Si tu as un composant Footer
+import HomeContent from '../HomeContent/HomeContent.js'; // Ton composant de contenu principal
 
-import React from "react";
-import "../Layout/Layout.css";
-
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <div className="layout">
-      {children}
+      <SideNav className="SideNav" />
+        <HomeContent />
+      <Footer className="footer" />
     </div>
   );
-}
+};
 
 export default Layout;
-

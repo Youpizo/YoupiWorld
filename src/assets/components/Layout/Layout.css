@@ -1,28 +1,53 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /* Prend toute la hauteur de l'écran */
+}
 
-body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  body, html {
-    margin: 0;
-    padding: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
+.header {
+  height: 80px; /* Ajuste la hauteur du header */
+}
+
+.home-content {
+  flex: 0 1 auto;   /* Prend tout l'espace restant disponible, mais ne s'étend pas */
+  overflow: auto;   /* Permet le défilement si le contenu est trop grand */
+}
+
+.footer {
+  height: 60px;     /* Hauteur fixe du footer */
+  position: relative;   /* Placer en bas */
+  margin-top: auto;     /* Ceci pousse le footer en bas */
+}
+
+  header, footer {
+  height: 60px;
+  flex-shrink: 0;
+  background-color: #111; /* exemple */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Autoriser le scroll global sur mobile */
+@media screen and (max-width: 600px) {
+  html, body {
+    overflow: auto;
   }
 
-  .layout {
-    display: flex;
-    margin: 0 auto;
-    max-width: 1440px;
-    flex-direction: column;
-    padding: 0 100px;
+  .home-content {
+    height: auto; /* S'adapte au contenu sur mobile */
+    max-height: none;
   }
-
-@media screen and (max-width: 960px) {
-    .layout {
-     padding: 0 20px;
-    }
-  }
+}
