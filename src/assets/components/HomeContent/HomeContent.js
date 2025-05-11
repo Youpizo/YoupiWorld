@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 import './HomeContent.css';
 
 const HomeContent = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const typedInstance = new Typed(typedRef.current, {
+      strings: ["", "Lead", "Automation", "Consultant", "OPS"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true
+    });
+
+    return () => {
+      typedInstance.destroy(); // Nettoyage propre si le composant est démonté
+    };
+  }, []);
+
   return (
     <section className="home-content">
-      <h1>Démarrer la partie</h1>
-      <p>Steps :</p>
+      <h1 className="profession">QA <span className="typing" ref={typedRef}></span></h1>
+      <p>test</p>
       <ul>
         <li>1. Installer git :  
             <a href="https://git-scm.com/download/win">Version Windows</a>
@@ -22,7 +38,7 @@ const HomeContent = () => {
         </li>
         <li>Pour commiter les modifications :
             <pre><code>npm install --save-dev gh-pages</code></pre>
-            <p>Configurer package.json : Ajoute la ligne suivante dans ton fichier package.json :</p>
+            <p>Configurer package.json :</p>
             <pre><code>"homepage": "https://Youpizo.github.io/YoupiWorld",</code></pre>
         </li>
       </ul>

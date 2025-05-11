@@ -3,7 +3,7 @@
 
 .home-content {
   height: 60vh; 
-  padding: 40px 20px;
+  padding: 20px 20px;
   margin: 0px 250px 0px 250px;
   text-align: center;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
@@ -71,6 +71,14 @@
   margin-bottom: 10px;
   color: #ffffff;
 }
+
+.p .profession { font-size: 30px; margin: 15px 0; }
+
+.typing {
+  color: #ad0505;
+  font-weight: bold;
+}
+
 
 pre {
     background-color: #f4f4f4;
