@@ -22,8 +22,8 @@ const Slider = () => {
             <div className="slide" key={index}>
               <img
                 src={img}
-                width="250"
-                height="100"
+                width="65"
+                height="25"
                 alt={`slide ${index + 1}`}
               />
             </div>

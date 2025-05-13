@@ -8,21 +8,17 @@
 }
 
 .slider {
-  background: rgba(255, 255, 255, 0.058);
-  backdrop-filter: blur(3px);
+  background: rgba(252, 248, 248, 0.058);
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(3px);
-  border-radius: 16px;
-  height: 70px;
+  border-radius: 10px;
+  height: 35px;
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 50%;
+  width: 25%;
   display: flex;
   align-items: center;
-}
-
-.container {
-  padding-bottom: 25px;
 }
 
 .slider::before,
@@ -57,7 +53,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 250px;
+  width: 150px;
 }
 
 .slide img {
