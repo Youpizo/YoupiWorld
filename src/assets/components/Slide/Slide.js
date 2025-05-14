@@ -15,7 +15,6 @@ const Slider = () => {
   const duplicatedImages = [...images, ...images];
 
   return (
-    <div className="container">
       <div className="slider">
         <div className="slide-track">
           {duplicatedImages.map((img, index) => (
@@ -30,7 +29,6 @@ const Slider = () => {
           ))}
         </div>
       </div>
-    </div>
   );
 };
 

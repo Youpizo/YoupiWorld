@@ -1,0 +1,100 @@
+/* Header bar */
+.header {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+
+/* Burger button */
+.burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  z-index: 2001;
+}
+
+
+.burger .bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.burger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.burger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.burger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Side sliding menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 260px;
+  background-color: #1e1e1e;
+  color: white;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  z-index: 2000;
+  padding: 2rem 1rem;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.5);
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu .close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5rem;
+}
+
+.side-menu ul li {
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.side-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.side-menu ul li a:hover {
+  color: #a259ff;
+}
+
+/* Overlay when menu is open */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}

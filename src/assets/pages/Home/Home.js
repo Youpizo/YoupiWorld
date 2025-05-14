@@ -1,13 +1,18 @@
 import Card from "../../components/Card/Card.js";
 import HeroSection from "../../components/HeroSection/HeroSection.js";
+import Header from '../../components/Header/Header.js';
+import "./Home.css"
+
+
 
 const HomePage = () => {
   return (
     <>
-    <div className="main-layout">
-      <HeroSection />
+      <Header />
+      <div className="container">
       <Card />
-    </div>
+      <HeroSection />
+      </div>
     </>
   );
 };

@@ -1,10 +1,12 @@
-/* src/components/HeroSection.css */
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
 
 .hero-section {
-  margin-left: 50%;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   margin-right: 10px;
   color: white;
   overflow-y: auto;
+  max-width: 700px;
 }
 
 .hero-text h1 {
@@ -75,4 +77,10 @@
 .btn.secondary:hover {
   background-color: #a259ff;
   color: white;
+}
+
+.slide-content {
+  margin-top: 2rem; /* Ajuste selon l'espacement voulu */
+  width: 100%;
+  justify-content: center; /* Centrer horizontalement */
 }

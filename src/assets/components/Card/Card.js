@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Card.css';
-import avatar from '../../img/avatar.jpg'; // Remplace par ton image
+import Typed from 'typed.js';
+import avatar from '../../img/avatar.jpg'; // Ton image de profil
 
 const Card = () => {
+  const typedRef = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(typedRef.current, {
+      strings: ["LEAD", "ENGINEER", "AUTOMATION", "CONSULTANT"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="card-container">
       <img src={avatar} alt="avatar" className="card-avatar" />
-      <h2 className="card-name">Loïc Dupont</h2>
-      <p className="card-title">Développeur Frontend & UX Designer</p>
+      <h2 className="card-name">Loïc Deruy</h2>
+      <p className="card-title">
+        QA <span ref={typedRef} className="typing" />
+      </p>
       <p className="card-location">Paris, France</p>
       <div className="card-socials">
         <a href="#"><i className="fab fa-dribbble"></i></a>
@@ -21,3 +39,4 @@ const Card = () => {
 };
 
 export default Card;
+

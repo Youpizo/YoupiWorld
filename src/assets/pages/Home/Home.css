@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  justify-content: center;     /* Centre horizontalement */
+  align-items: flex-end;     /* Aligne en haut verticalement */
+  gap: 40px;                   /* Espace entre Card et HeroSection */
+  padding: 100px 40px 40px;    /* Décale le contenu du haut pour ne pas passer sous le header */
+  flex-wrap: wrap;             /* Permet de passer en colonne si l'écran est petit */
+}
