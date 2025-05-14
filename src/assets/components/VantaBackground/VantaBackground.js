@@ -17,8 +17,8 @@ const VentaBackground = (props) => {
     minWidth: 200.00,
     scale: 1.00,
     scaleMobile: 1.00,
-    color: 0x340441,
-    backgroundColor: 0x0,
+    color: 0x1f2222,
+    backgroundColor: 0x1b,
     points: 15.00,
     maxDistance: 12.00
       }));

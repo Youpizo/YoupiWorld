@@ -3,47 +3,32 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 5)); /* Nombre d'images ORIGINALES */
+    transform: translateX(-50%);
   }
 }
 
 .slider {
-  background-color: #1e1e1e;
-  backdrop-filter: blur(5px);
+  background: transparent;
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
   border-radius: 10px;
-  height: 55px;
+  height: 130px;
   overflow: hidden;
   position: relative;
-  width: 75%;
+  width: 80%;
   display: flex;
+  
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
-.slider::before,
-.slider::after {
-  content: "";
-  height: 100%;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-}
 
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
-}
 
 .slide-track {
-  animation: scroll 40s linear infinite;
+  animation: scroll 20s linear infinite;
   display: flex;
   align-items: center;
-  width: calc(250px * 10); /* 5 images * 2 (car dupliquées) */
+  width: calc(150px * 10); /* 5 images × 2 */
 }
 
 .slide {
@@ -55,8 +40,7 @@
 }
 
 .slide img {
-  max-height: 50px;
+  max-height: 70px;
   object-fit: contain;
 }
-
 
