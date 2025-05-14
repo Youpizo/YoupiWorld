@@ -7,7 +7,6 @@ import AboutPage from "./assets/pages/About";
 import ErrorPage from "./assets/pages/Erreur";
 import VantaBackground from "./assets/components/VantaBackground/VantaBackground";
 
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>

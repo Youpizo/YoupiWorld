@@ -1,8 +1,32 @@
-.container {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Empêche le défilement */
+}
+
+.main-container {
   display: flex;
-  justify-content: center;     /* Centre horizontalement */
-  align-items: flex-end;     /* Aligne en haut verticalement */
-  gap: 40px;                   /* Espace entre Card et HeroSection */
-  padding: 100px 40px 40px;    /* Décale le contenu du haut pour ne pas passer sous le header */
-  flex-wrap: wrap;             /* Permet de passer en colonne si l'écran est petit */
+  flex-direction: column;
+  height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+.content-container {
+  flex: 1; /* Prend tout l'espace disponible entre le header et le footer */
+  display: flex;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+  gap: 40px; /* Espace entre Card et HeroSection */
+  flex-wrap: wrap; /* Permet de passer en colonne si l'écran est petit */
+  padding: 20px; /* Ajoute un peu d'espace autour du contenu */
+  box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
+}
+
+.footer {
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  /* Ajoutez d'autres styles pour le footer si nécessaire */
 }
