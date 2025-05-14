@@ -28,9 +28,9 @@ const Card = () => {
       </p>
       <p className="card-location">Paris, France</p>
       <div className="card-socials">
-        <a href="https://www.linkedin.com/in/lo%C3%AFc-deruy-36141a161/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="loic.deruy@sfr.fr" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://github.com/Youpizo" target="_blank"><i className="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/lo%C3%AFc-deruy-36141a161/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <a href="loic.deruy@sfr.fr" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://github.com/Youpizo" target="_blank" rel="noopener noreferrer"><i className="fab fa-github"></i></a>
       </div>
       <button className="card-button">Let's Talk</button>
     </div>
