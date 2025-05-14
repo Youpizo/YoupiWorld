@@ -4,7 +4,6 @@ import Header from '../../components/Header/Header.js';
 import "./Home.css"
 
 
-
 const HomePage = () => {
   return (
     <>
